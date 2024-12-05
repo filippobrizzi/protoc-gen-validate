@@ -43,7 +43,7 @@ bazel_dep(
 )
 bazel_dep(
     name = "rules_python",
-    version = "0.22.0",
+    version = "1.0.0-rc2",
 )
 # -- bazel_dep definitions -- #
 
@@ -62,7 +62,7 @@ use_repo(
 
 pip = use_extension("@rules_python//python/extensions:pip.bzl", "pip")
 pip.parse(
-    name = "pgv_pip_deps",
+    hub_name = "pgv_pip_deps",
     requirements_lock = "//python:requirements.txt",
 )
 use_repo(pip, "pgv_pip_deps")
